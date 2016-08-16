@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1><a href="/">My Study Blog</a></h1>
+</div>
+{% for post in posts %}
+    <div>
+        <p>发布日期：{{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>
+            {{ post.text|linebreaks }}
+        </p>
+    </div>
+{% endfor %}
+
+
+</body>
+</html>
